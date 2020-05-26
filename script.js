@@ -4,7 +4,6 @@
 
 // VARIABLES
 const cont = document.querySelector("container");
-const box = document.querySelector(".box");
 const btn = document.querySelector("#btn");
 
 
@@ -13,7 +12,12 @@ btn.addEventListener("click", function(){
     let n = 16
     let width = cont.clientWidth / n;
     let height = cont.clientHeight / n;
-    box.setAttribute(
-        "style","border: solid; width:"+width+"px; height:"+height+"px"
-    );
-});
+    for (i=0; i<n-1; i++){
+        let div = document.createElement("div");
+        div.classList.add("box");
+        cont.appendChild(div);
+    }
+    let box = document.querySelectorAll(".box");
+    box.forEach(box => box.setAttribute(    
+    "style","border: solid; width:"+width+"px; height:"+height+"px"
+    ))});
