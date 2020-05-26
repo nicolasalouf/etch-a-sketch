@@ -10,7 +10,10 @@ const btn = document.querySelector("#btn");
 
 // COMMANDS
 btn.addEventListener("click", function(){
+    let n = 16
+    let width = cont.clientWidth / n;
+    let height = cont.clientHeight / n;
     box.setAttribute(
-        "style","border: solid; width: 30px; height: 30px"
+        "style","border: solid; width:"+width+"px; height:"+height+"px"
     );
 });
