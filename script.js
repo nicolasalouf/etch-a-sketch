@@ -20,7 +20,10 @@ function formatBox(width, height){
     let box = document.querySelectorAll(".box");
     box.forEach(box => box.setAttribute(    
     "style","border: solid 1px; width:"+width+"px; height:"+height+"px; float: right"
-    ))
+    ));
+    box.forEach(box => box.addEventListener("mouseover", function(){
+        this.classList.add("color");
+    }))
 }
 
 function drawGrid(){

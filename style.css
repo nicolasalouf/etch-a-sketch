@@ -15,3 +15,7 @@ container {
 button {
     display: inline-block; 
 }
+
+.color {
+    background-color: blue;
+}
