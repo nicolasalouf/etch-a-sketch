@@ -1,5 +1,13 @@
 
 // FUNCTIONS
+function reset(){
+    let div = cont.lastChild;
+    while(div) {
+        cont.removeChild(div);
+        div = cont.lastChild;        
+    }
+}
+
 function createBox(n){
     for (i=0; i<n*n; i++){
         let div = document.createElement("div");
@@ -19,6 +27,7 @@ function drawGrid(){
     let n = prompt("please enter n");
     let width = (cont.clientWidth / n)-2;
     let height = (cont.clientHeight / n)-2;
+    reset();
     createBox(n);
     formatBox(width, height);
     }
