@@ -19,7 +19,7 @@ function createBox(n){
 function formatBox(width, height){
     let box = document.querySelectorAll(".box");
     box.forEach(box => box.setAttribute(    
-    "style","border: solid 0.05px; width:"+width+"px; height:"+height+"px; float: right"
+    "style","border: solid 1px; width:"+width+"px; height:"+height+"px; float: right"
     ))
 }
 
